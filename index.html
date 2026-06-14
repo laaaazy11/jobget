@@ -1,0 +1,71 @@
+!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer捕手 - AI求职智能匹配助手</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header>
+            <h1>🎯 Offer捕手</h1>
+            <p class="subtitle">AI求职智能匹配助手 - 让你的简历命中率翻倍</p>
+        </header>
+
+        <!-- 简历输入区 -->
+        <section class="input-section">
+            <h2>📝 我的简历</h2>
+            <textarea id="resumeInput" 
+                      placeholder="请粘贴你的简历内容，或描述你的教育背景、技能、项目经验、实习经历等..."></textarea>
+            <button id="sampleResumeBtn" class="btn-secondary">📋 填入示例简历</button>
+        </section>
+
+        <!-- 岗位输入区 -->
+        <section class="input-section">
+            <h2>🔍 目标岗位</h2>
+            <select id="jobSelect">
+                <option value="">-- 选择预设岗位 --</option>
+                <option value="前端开发实习生">前端开发实习生</option>
+                <option value="Java后端实习生">Java后端开发实习生</option>
+                <option value="数据分析实习生">数据分析实习生</option>
+                <option value="AI产品实习生">AI产品实习生</option>
+                <option value="测试实习生">软件测试实习生</option>
+            </select>
+            <p class="or-divider">── 或者手动输入 ──</p>
+            <textarea id="jdInput" 
+                      placeholder="粘贴目标岗位的JD（岗位描述），越详细分析越准确..."></textarea>
+        </section>
+
+        <!-- 匹配按钮 -->
+        <button id="matchBtn" class="btn-primary">🚀 开始智能匹配</button>
+        
+        <!-- 加载状态 -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>AI正在深度分析中，请稍候...</p>
+        </div>
+
+        <!-- 结果展示区 -->
+        <section id="resultSection" class="result-section hidden">
+            <div class="score-card">
+                <h3>📊 综合匹配度</h3>
+                <div class="score-circle" id="scoreDisplay">--%</div>
+            </div>
+            <div id="analysisContent">
+                <!-- AI分析结果将动态填充到这里 -->
+            </div>
+        </section>
+        
+        <!-- 错误提示 -->
+        <div id="errorMsg" class="error-msg hidden"></div>
+    </div>
+
+    <footer>
+        <p>Powered by DeepSeek AI | 仅供学习交流使用</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
