@@ -2,7 +2,7 @@
 const CONFIG = {
     // ⚠️ 部署前务必替换为你的API Key
     // DeepSeek: https://platform.deepseek.com/
-    API_KEY: 'sk-your-deepseek-api-key-here',
+    API_KEY: 'sk-d7200770a9314d17a16d1920ba35e7dd',
     
     // DeepSeek API 端点（兼容OpenAI格式）
     API_URL: 'https://api.deepseek.com/v1/chat/completions',
